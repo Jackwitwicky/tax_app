@@ -28,5 +28,17 @@ module TaxApp
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.to_prepare do
+      # Load application prependers
+      Dir.glob(Rails.root.join('app', 'prependers', '**', '*.rb')).sort.each do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+
+      Rails.root.join('app', 'prependers', '*').tap do |path|
+        prepender_paths = Dir.glob(path).map { |p| File.expand_path(p, __FILE__) }
+        Prependers.load_paths(*prepender_paths)
+      end
+    end
   end
 end

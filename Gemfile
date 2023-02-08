@@ -31,6 +31,7 @@ gem "jbuilder"
 gem "redis", "~> 4.0"
 
 gem 'solidus_zip_zones', git: 'https://github.com/solidusio-contrib/solidus_zip_zones'
+gem 'prependers'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

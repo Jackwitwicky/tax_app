@@ -237,6 +237,7 @@ GEM
       ast (~> 2.4.1)
     pg (1.4.5)
     polyglot (0.3.5)
+    prependers (1.0.0)
     psych (4.0.6)
       stringio
     public_suffix (5.0.1)
@@ -471,6 +472,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   pg (~> 1.1)
+  prependers
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
   rails-controller-testing (~> 1.0.5)
