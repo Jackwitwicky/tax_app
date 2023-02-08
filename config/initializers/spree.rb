@@ -8,6 +8,7 @@ Spree.config do |config|
   # Core:
   # Default currency for new sites
   config.currency = "USD"
+  config.tax_calculator_class = 'MyTaxCalculator'
 
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
